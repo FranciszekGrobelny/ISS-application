@@ -4,8 +4,12 @@ public class ISS {
 
     public static void main(String[] args) throws Exception {
 
-        urlDateDownload information = new urlDateDownload();            
+        urlDateDownload information = new urlDateDownload();   
+        dataBaseWorld posi = new dataBaseWorld();
                 
-        information.getDate();             
+        information.getDate();   
+        System.out.println("Szerokość geograficzna: " + information.getLatitude());
+        System.out.println("Długość goegraficzna: " + information.getLongitude());
+        posi.getPosition(information.getLatitude(),information.getLongitude());
     }
 }
